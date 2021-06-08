@@ -1,0 +1,22 @@
+<section class="section">
+    <h1 class="title">myBolsa</h1>
+    <form class="cointainer" #addForm='ngForm' (ngSubmit)='usuarioControl(addForm)'>
+       <div class="login-form row">
+          <div class="form-field col-md-6 ml-auto">
+             <input ngModel name='usuario' id='name' type="text" class="input-text" required>
+             <label for="name" class="label">user</label>
+          </div>
+          <div class="form-field col-md-6 ml-auto">
+             <input ngModel name='contraseña' id='password' type="text" class="input-text" required>
+             <label for="pasword" class="label">Password</label>
+          </div>
+          <div class="form-field col m-auto">
+             <input [disabled]='addForm.invalid' id ='btnEntrar' type="submit" class="submit-btn" value='entrar'>
+         </div>
+          <div class="form-field col m-auto">
+             <input (click)='registro()' type="submit" class="submit-btn" value='registro'>
+         </div>
+       </div>
+    </form>
+ </section>
+ 

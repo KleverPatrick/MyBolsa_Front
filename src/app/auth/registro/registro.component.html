@@ -1,0 +1,26 @@
+<section class="section">
+    <h1 class="title">Registro Mybolsa</h1>
+    <form class="container" #addForm='ngForm' id='formulario'>
+        <div class="registre-form row">
+            <div class="form-field col-lg-6">
+                <input  id='name' ngModel name='usuario' type="text" class="input-text" >
+                <label for="name" class="label">Nombre de usuario</label>
+            </div>
+
+            <div class="form-field col-lg-6">
+                <input  id='contraseña'  ngModel name='contraseña' type="password" class="input-text">
+                <label for="contraseña" class="label">password</label>
+            </div>
+            <div class="form-field col-lg-6">
+                <input  id='conf_pass' type="password" class="input-text" name='password'>
+                <label for="conf_pass" class="label">confrimación password</label>
+            </div>
+        
+            <div class="form-field col-lg-6">
+                <input  type="submit" (click) = 'registroUsuario(addForm)' class="submit-btn" value='registrar'>
+            </div>
+        </div>
+    </form>
+</section>
+
+<!-- (ngSubmit)='registroUsuario(addForm)' -->
