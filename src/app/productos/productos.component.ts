@@ -46,10 +46,7 @@ export class ProductosComponent implements OnInit {
   //Funccion para capturar una imagen
   capturarFile(event):any{
     this.imagenCapturada = <File>event.target.files[0];
-  
-    //this.imageString = this.sanitizer.bypassSecurityTrustUrl(window.URL.createObjectURL(this.imagenCapturada)) as string;
-    console.log(this.imagenCapturada);
-    this.convertToBase64(this.imagenCapturada);
+      this.convertToBase64(this.imagenCapturada);
     
   }
 
@@ -85,10 +82,8 @@ export class ProductosComponent implements OnInit {
   public onAddProduct(addForm: NgForm): void{ 
     this.prodAux = addForm.value;
     this.prodAux.imageUrl = this.imageString;
-    console.log(this.prodAux);
     this.productoService.addProducto(this.prodAux ).subscribe(
       (response: Producto) => {
-        console.log(response);
         this.getProductos();
         addForm.reset();
       },
